@@ -1,8 +1,12 @@
-#' Create a Chapter
+#' Augment a Pages Data Frame with LaTeX-friendly Text
 #'
-#' @param pages A data frame of pages.
+#' @param pages A data frame containing a column of 'text' and dates 'ymd'.
 #'
-#' @return A data frame of pages with new columns.
+#' @return A data frame of pages with new columns, `tex` and `tex_w_heading`
+#'  containing the same data as the `text` column but chopped into strings
+#'  of a near fixed length (without breaking words), with some special LaTeX
+#'  characters escaped and, in the case of `tex_w_heading` with a pre-pended
+#'  section heading containing date and time information.
 #' @export
 create_chapter_df <- function(pages) {
   pages |>

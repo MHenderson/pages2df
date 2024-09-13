@@ -2,9 +2,12 @@
 % Please edit documentation in R/summarise-chapter-df.R
 \name{summarise_chapter_df}
 \alias{summarise_chapter_df}
+\alias{create_chapters}
 \title{Summarise Chapters}
 \usage{
 summarise_chapter_df(pages)
+
+create_chapters(pages)
 }
 \arguments{
 \item{pages}{A data frame of pages.}
