@@ -2,16 +2,20 @@
 % Please edit documentation in R/create-chapter-df.R
 \name{create_chapter_df}
 \alias{create_chapter_df}
-\title{Create a Chapter}
+\title{Augment a Pages Data Frame with LaTeX-friendly Text}
 \usage{
 create_chapter_df(pages)
 }
 \arguments{
-\item{pages}{A data frame of pages.}
+\item{pages}{A data frame containing a column of 'text' and dates 'ymd'.}
 }
 \value{
-A data frame of pages with new columns.
+A data frame of pages with new columns, \code{tex} and \code{tex_w_heading}
+containing the same data as the \code{text} column but chopped into strings
+of a near fixed length (without breaking words), with some special LaTeX
+characters escaped and, in the case of \code{tex_w_heading} with a pre-pended
+section heading containing date and time information.
 }
 \description{
-Create a Chapter
+Augment a Pages Data Frame with LaTeX-friendly Text
 }

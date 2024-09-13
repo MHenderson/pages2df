@@ -2,16 +2,21 @@
 % Please edit documentation in R/pages-df.R
 \name{pages_df}
 \alias{pages_df}
-\title{A Data Frame of Pages}
+\alias{read_pages}
+\title{Read Morning Pages from Disk}
 \usage{
 pages_df(pagespath)
+
+read_pages(pagespath, years = c(2021))
 }
 \arguments{
-\item{pagespath}{Path to input pages.}
+\item{pagespath}{Path to morning pages.}
+
+\item{years}{Years to filter.}
 }
 \value{
-A data frame with columns ymd and text.
+A data frame with columns \code{ymd} and \code{text}.
 }
 \description{
-A Data Frame of Pages
+Read Morning Pages from Disk
 }
